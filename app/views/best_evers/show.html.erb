@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @best_ever.song %>, <%= @best_ever.artist %></h1>
+
+<p><%= @best_ever.comment %></p>
+<div class="btn-group">
+<%= link_to 'Edit', edit_best_ever_path(@best_ever), class: "btn btn-default" %> |
+<%= link_to 'Back', best_evers_path, class: "btn btn-default" %>
+</div>

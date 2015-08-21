@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Song:</strong>
+  <%= @vote.song_id %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @vote.artist_id %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @vote.rank %>
+</p>
+
+<%= link_to 'Edit', edit_vote_path(@vote) %> |
+<%= link_to 'Back', votes_path %>

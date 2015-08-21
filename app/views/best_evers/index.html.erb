@@ -1,0 +1,31 @@
+
+  <% if notice != nil %>
+    <p id="notice" class="alert alert-success" role="alert">
+      <%= notice %>
+    </p>
+  <% end %>
+
+<h1>Best Song Entries</h1>
+
+  <div class="row">
+    <% @best_evers.each do |bestever| %>
+      <div class="col-md-4">
+       <div class="panel panel-default">
+        <div class="panel-body">
+         <h4><%= bestever.user %></h4>
+         <h3><%= bestever.song %></h3>
+         <h3><%= bestever.artist %></h3>
+         <p><%= bestever.comment %></p>
+       
+         <div class="btn-group">
+          <%= link_to 'Show', bestever, class: "btn btn-default" %>
+          <%= link_to 'Edit', edit_best_ever_path(bestever), class: "btn btn-default" %>
+          <%= link_to 'Destroy', bestever, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+         </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Song', new_best_ever_path, class: "btn btn-default" %>
